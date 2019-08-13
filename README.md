@@ -50,7 +50,7 @@ cloud-based assets, but may take extra configuration and time.
 
 ## Workflow
 
-Portions of the workflow have supplemental example scripts written in Ruby.
+Portions of the workflow have supplemental example scripts written in [Ruby](https://www.ruby-lang.org/en/).
 These scripts are meant to be examples and adjusted accordingly for custom
 installations and issues.
 
@@ -73,7 +73,7 @@ desired collection, and get the ID from the URL.
 
 See example photo below:
 
-![assets/point-at-id.png](get collection ID)
+![/get Collection ID](assets/point-at-id.png)
 
 **Avalon API key**: To access the Avalon API, a key is needed. This is generated
 via a `rake` task within Avalon.
