@@ -130,6 +130,8 @@ of the script into a new document, like so:
 
 If the contents are as expected, you can move to the next step of the workflow.
 
+Output: Manifest of all files that will be moved.
+
 ### Retrieve and move Item's media objects
 
 Requires: `Avalon_Export_List.json`
