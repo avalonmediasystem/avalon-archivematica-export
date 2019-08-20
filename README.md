@@ -16,21 +16,17 @@ during this process?
 
 This is a workflow with example scripts for exporting video assets and
 metadata out of Avalon for subsequent processing through
-[Archivematica](https://www.archivematica.org/en/), a digital preservation system.
-
-For processing through Archivematica and then Avalon, see [this documentation
-page](https://wiki.dlib.indiana.edu/display/VarVideo/Archivematica+to+Avalon+Workflow).
+[Archivematica](https://www.archivematica.org/en/), a digital preservation
+system. This strategy is targeting backlogs of access items that need to move into
+preservation storage.
 
 Export mechanisms are set to work at the Collection level. The expectation here
 is that a Collection is finalized and the assets are ready to be processed
 through Archivematica and moved into long-term storage.
 
-For new content and Collections being regularly updated, it is better to
-establish a workflow through which content is being ingested into both
-Archivematica and Avalon at the same time.
-
-This strategy is targeting backlogs of access items that need to move into
-preservation storage.
+For new content and Collections being regularly updated, institutions are
+recommended to adopt the [Archivematica to Avalon
+workflow](https://wiki.dlib.indiana.edu/display/VarVideo/Archivematica+to+Avalon+Workflow).
 
 ## ⚠ Can this workflow work for you?
 
@@ -90,12 +86,12 @@ utilizes the above gathered information: Avalon URL, Collection ID, and Avalon
 API key. Running the script will prompt the user for each.
 
 This script calls the Avalon API for all of the items in a collection, and
-writes that resulting JSON query to file entitled `Avalon_Export_List.json`.
+writes that resulting JSON query to a file entitled `Avalon_Export_List.json`.
 This JSON will be used in the following scripts to create a manifest, retrieve
 item and media object data, and retrieve associated metadata.
 
 Instead of running this script, you can retrieve the JSON from
-`http://localhost/admin/collections/COLLECTION_ID_HERE/items.json` and saving
+`http://localhost/admin/collections/COLLECTION_ID_HERE/items.json` and save
 the contents of that API endpoint.
 
 Output: A JSON file from a Collection's `items.json` API endpoint.
@@ -106,9 +102,10 @@ Requires: `Avalon_Export_List.json`
 
 Using the JSON retrieved from the
 [get_collection_data.rb](example-scripts/get_collection_data.rb) script, the
-[get_items.rb](example-scripts/get_items_.rb) script parses the data and creates
-a list of all the file locations for each Media Object and pairs it with its associated
-Item, and creating a manifest list of Items with containing filepaths.
+[get_items.rb](example-scripts/get_items_.rb)script parses the data, creates a
+list of all the file locations
+for each Media Object, and then pairs these with the associated Item to create a
+manifest list of Items with filepaths.”
 
 Running the script will print the Items and associated files to screen for review.
 
