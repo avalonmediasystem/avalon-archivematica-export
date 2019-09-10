@@ -60,7 +60,8 @@ output is what is expected.
 Before working with the files and data, certain information needs to be gathered
 about the Avalon instance.
 
-**Avalon URL**: This is the custom URL through which users access your Avalon instance.
+**Avalon URL**: This is the custom URL through which users access your Avalon
+instance. Include the full path, including http(s).
 
 **Collection ID**: This is the identifier for the Collection you want to retrieve
 and send to Archivematica for processing. To get the Collection ID, select

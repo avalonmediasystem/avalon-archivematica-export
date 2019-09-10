@@ -9,14 +9,12 @@ def get_variable(value)
 end
 
 def request_items_data
-  uri = URI.parse("http://#{get_variable('Avalon URL')}/admin/collections/#{get_variable('Collection ID')}/items.json")
+  uri = URI.parse("#{get_variable('Avalon URL')}/admin/collections/#{get_variable('Collection ID')}/items.json")
 
   request = Net::HTTP::Get.new(uri)
   request["Avalon-Api-Key"] = get_variable("Avalon-Api-Key")
 
-  req_options = {use_ssl: uri.scheme == "https",}
-
-  response = Net::HTTP.start(uri.hostname, uri.port, req_options) do |http|
+  response = Net::HTTP.start(uri.hostname, uri.port) do |http|
     http.request(request)
   end
 
